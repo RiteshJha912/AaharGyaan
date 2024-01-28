@@ -1,0 +1,54 @@
+.cb-container::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 185%;
+    z-index: -2;
+    opacity: 1;
+    background-color: #22333b;
+}
+.cb-container{
+    padding: 10px;
+    height: 150vh;
+    box-shadow:  0px 0px 50px 35px rgba(0, 0, 0, 0.05);
+    background-color: #55828b;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.cb-container h2{
+    font-family: 'Quantico', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    padding: 40px 60px;
+}
+.cb-container h1{
+    font-family: 'Libre Barcode 128 Text', system-ui;
+    padding: 20px 0px;
+    font-size: 80px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .cb-container h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .cb-container h1 {
+        font-size: 30px;
+        padding: 5px 0px;
+        
+    }
+}
+@media only screen and (max-width: 480px) {
+    .cb-container h2 {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .cb-container h1 {
+        font-size: 24px;
+        padding: 5px 0px;
+    }
+}

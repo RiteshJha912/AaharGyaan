@@ -1,0 +1,63 @@
+<!-- page1 -->
+<link rel="stylesheet" href="scanstyle.css">
+<div class="container">
+    <div class="left-half">
+        <figure class="image-container">
+            <img id="chosen-image">
+            <figcaption id="file-name"></figcaption>
+        </figure>
+        <input type="file" id="upload-button" accept="image/*">
+
+        <label for="upload-button">
+            <i class=""></i> &nbsp; Choose A Photo
+        </label>
+        <label for="send-button">
+            <i class="fas fa-upload"></i> &nbsp; Send For Scan
+        </label>
+    </div>
+    <div class="right-half">
+        <h2>The information about your food</h2>
+        <br>
+        <br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique qui
+        totam ipsum earum? Aut illum, placeat ipsum culpa, consequuntur voluptatibus enim voluptates deserunt
+        assumenda reiciendis possimus officia nesciunt earum? Fuga.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deserunt quia est ipsam officia! Tempore
+        accusantium ex recusandae velit corporis, ratione voluptates molestiae laborum architecto ducimus eius sit
+        quis assumenda numquam iste, impedit totam itaque quibusdam minima. Sapiente ullam ipsam optio mollitia
+        libero debitis laudantium illum, voluptatem accusamus quam amet quod velit quae tenetur! Dolores culpa
+        repellendus mollitia repellat enim perspiciatis ullam laudantium? Atque quam porro commodi expedita omnis
+        mollitia labore laudantium sit officiis, ab aliquid amet suscipit, eligendi incidunt et vitae corrupti quia
+        minus aspernatur vero aperiam natus quos dolore. Provident est rem necessitatibus dolores natus reiciendis
+        ad, eos ab accusamus vel harum fugiat dolorum eaque odio explicabo vero, excepturi soluta laboriosam,
+        
+       
+    </div>
+</div>
+
+<!--Script-->
+<script >
+    console.log("Script loaded!");
+let uploadButton = document.getElementById("upload-button");
+let chosenImage = document.getElementById("chosen-image");
+let fileName = document.getElementById("file-name");
+
+uploadButton.onchange = () => {
+    console.log("File selected!");
+    let reader = new FileReader();
+    reader.readAsDataURL(uploadButton.files[0]);
+    reader.onload = () => {
+        console.log("File loaded!");
+        chosenImage.setAttribute("src", reader.result);
+    }
+    fileName.textContent = uploadButton.files[0].name;
+}
+
+
+document.querySelector('label[for="upload-button"]').addEventListener('click', () => {
+    // Add functionality for the "Send For Scan" label here
+    // For example, you can add an AJAX request to send the file for scanning.
+    // You may also want to prevent the default behavior of the label to avoid page reloading.
+});
+
+</script>
