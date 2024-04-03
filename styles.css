@@ -13,7 +13,6 @@ body {
     border-radius: 50px;
     display: flex; 
     justify-content: center; 
-    transition: all ease-out 0.3s;
 }
 
 .navbar a {
@@ -24,18 +23,19 @@ body {
     text-align: center;
     padding: 20px 30px;
     text-decoration: none;
+    transition: transform ease-out 0.3s; /* Added transition here */
 }
-
 
 .navbar a:hover {
     color: rgb(181, 180, 180);
     transform: scale(1.3);
-    transition: all ease-out 0.3s;
 }
+
 .navbar a:focus {
     color: rgb(133, 130, 130);
     transform: scale(1.3);
 }
+
 
 
 
