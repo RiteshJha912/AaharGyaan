@@ -13,6 +13,7 @@ body {
     border-radius: 50px;
     display: flex; 
     justify-content: center; 
+    transition: all ease-out 0.3s;
 }
 
 .navbar a {
